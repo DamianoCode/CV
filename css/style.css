@@ -1,10 +1,47 @@
 body {
   background-color: #f5f7fa;
   padding: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.container, .footer {
+@media print {
+  body {
+    background-color: #fff;
+    padding: 0;
+    max-height: 100vh;
+  }
+  div {
+    break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+  }
+
+  .container,
+  .footer {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: none !important;
+  }
+
+  .footer p {
+    padding-left: 0 !important;
+  }
+
+  .right-side {
+    width: 70%;
+  }
+  .left-side {
+    width: 30%;
+  }
+  .photo {
+    width: 100%;
+  }
+}
+
+.container,
+.footer {
   display: flex;
   width: 1200px;
   margin-left: auto;
@@ -18,15 +55,15 @@ body {
 .projects,
 .jobs,
 .education {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .right-side {
   width: 830px;
   padding-left: 80px;
   padding-right: 200px;
-  padding-top: 68px;
-  padding-bottom: 68px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .bio-title {
@@ -34,8 +71,8 @@ body {
   line-height: 2;
   margin-bottom: 20px;
 }
-.bio-title::after{
-  content: '\22EF';
+.bio-title::after {
+  content: "\22EF";
   color: #ff6b08;
   font-size: 55px;
   margin: 0 0 0 20px;
@@ -101,7 +138,8 @@ body {
   line-height: 2;
 }
 
-.experience-item, .tech-item {
+.experience-item,
+.tech-item {
   color: #595959;
   font-size: 14px;
   line-height: 1.714;
@@ -119,22 +157,26 @@ body {
   color: #fff;
 }
 
-.skills-title, .languages-title {
+.skills-title,
+.languages-title {
   font-size: 22px;
   line-height: 1.091;
 }
 
-.skills-item, .languages-item {
+.skills-item,
+.languages-item {
   font-size: 14px;
   line-height: 1.714;
 }
 
-.skills-list, .languages-list {
+.skills-list,
+.languages-list {
   list-style: none;
   padding-left: 0;
 }
 
-.skills-item::before, .languages-item::before {
+.skills-item::before,
+.languages-item::before {
   content: "\2022";
   margin-right: 8px;
   color: #ff6b08;
